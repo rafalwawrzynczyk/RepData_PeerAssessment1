@@ -133,7 +133,7 @@ After missing imputation, we check the distribution of total steps per day varia
 
 
 ```r
-tmp_total_steps_imp <- ddply(data_imp, c("date"), summarise, Total_steps_imp=sum(steps_imp, na.rm=T))
+tmp_total_steps_imp <- ddply(data_imp, c("date"), summarise, Total_steps_imp=sum(steps_imp))
 ```
 
 

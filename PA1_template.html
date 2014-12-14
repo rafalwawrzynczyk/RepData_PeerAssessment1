@@ -309,7 +309,7 @@ data_imp &lt;- m[,c(&quot;interval&quot;,&quot;steps_imp&quot;,&quot;date&quot;)
 
 <p>After missing imputation, we check the distribution of total steps per day variable.</p>
 
-<pre><code class="r">tmp_total_steps_imp &lt;- ddply(data_imp, c(&quot;date&quot;), summarise, Total_steps_imp=sum(steps_imp, na.rm=T))
+<pre><code class="r">tmp_total_steps_imp &lt;- ddply(data_imp, c(&quot;date&quot;), summarise, Total_steps_imp=sum(steps_imp))
 </code></pre>
 
 <pre><code class="r">p3 &lt;- ggplot(data=tmp_total_steps_imp, aes(x=Total_steps_imp))
